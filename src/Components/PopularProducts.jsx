@@ -13,7 +13,7 @@ const Popuarproducts = () => {
   return (
     <div className="mx-4 w-calc(100% - 32px)">
       <h1 className="title">Produits Populaires :</h1>
-      <div className="grid w-full aa my-2 gap-2 md:grid-cols-5 smal:grid-cols-2 justify-between justify-items-center items-center overflow-scroll">
+      <div className="grid w-full aa my-2 gap-2 md:grid-cols-5 smal:grid-cols-2 sm:grid-cols-3 smal:justify-between justify-center justify-items-center items-center overflow-scroll">
         {products.map((product, index) => (
           <Link to={`/product/${product.id}`}><div key={index} className="flex w-full pb-2 flex-col bg-white shadow-md border-y-[1px] rounded-sm gap-2">
             <img
