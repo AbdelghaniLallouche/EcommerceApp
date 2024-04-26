@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+ @apply bg-[#D9D9D9] bg-opacity-20;
+}
+
+.txt{
+  @apply text-xl font-bold text-black;
+}
+
+.aa::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.aa {
+  overflow-y: scroll; /* Add the ability to scroll */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.title{
+  @apply text-[17px] font-semibold;
+}
+.inputt{
+  @apply ps-2 pt-1 pb-2 focus:outline-none bg-[#F4F5F7] w-full  rounded-md text-black;
+}
