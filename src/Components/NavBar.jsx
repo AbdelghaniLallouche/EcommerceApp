@@ -44,7 +44,7 @@ const Navbar = () => {
           {isAuth === false ? (
             <Link
               to="/login"
-              className="bg-[#D9D9D9] text-black text-md sm:px-8 px-1 pt-1 pb-[6px] rounded-2xl"
+              className="bg-[#D9D9D9] text-black text-[11px] gg:text-md sm:px-8 px-1 pt-1 pb-[6px] rounded-2xl"
             >
               S'inscrire
             </Link>
