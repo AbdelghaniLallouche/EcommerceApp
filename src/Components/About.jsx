@@ -1,19 +1,20 @@
+import { HistoryIcon  , MissionIcon , VisionIcon} from "../public/Svgs";
 
 const About = () => {
   const about = [
     {
       title: "Mission",
-      icon: "",
+      icon: <MissionIcon/>,
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
     },
     {
       title: "Vision",
-      icon: "",
+      icon: <VisionIcon/>,
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
     },
     {
       title: "History",
-      icon: "",
+      icon: <HistoryIcon/>,
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptates.",
     },
   ];
@@ -34,8 +35,8 @@ const About = () => {
         {about.map((item) => (
           <div className="flex flex-col rounded-sm p-4 h-72 w-78 bg-[#C5A491] justify-evenly items-center">
             <div className="flex flex-col items-center">
-              <div className="bg-[#EADED7] w-12 h-12 rounded-full">
-                
+              <div className="bg-[#EADED7] w-12 h-12 flex flex-row justify-center items-center rounded-full">
+                {item.icon}
               </div>
               <h1 className="text-xl font-bold mt-1 text-[#563227]">{item.title}</h1>
             </div>
