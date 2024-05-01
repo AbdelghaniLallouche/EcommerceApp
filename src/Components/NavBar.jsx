@@ -10,9 +10,9 @@ const Navbar = () => {
     name : "name",
     email : "email",
     password : "password" ,
-    role :  3, // 1 for costumer , 2 for vendeur , 3 for admin
+    role :  2, // 1 for costumer , 2 for vendeur , 3 for admin
   }) // user object [id, name, email, password, ...] (Redux or Context API can be used here)
-  const [isAuth, setIsAuth] = useState(false); // check if user is authenticated (Redux or Context API can be used here)
+  const [isAuth, setIsAuth] = useState(true); // check if user is authenticated (Redux or Context API can be used here)
   const [search, setSearch] = useState("");
   return (
     <div>
@@ -22,14 +22,19 @@ const Navbar = () => {
       >
         <div className="flex w-full flex-row justify-between sm:gap-8 gap-1 items-center">
           <div className="flex items-center justify-start gap-2">
-            <Link to="/">
+            <Link to={user.role === 3 ? `/admin` : `/`}>
             <Logo />
             </Link>
             <h1 className="txt sm:inline-block hidden uppercase">Logo</h1>
           </div>
 
           <form onSubmit={()=>{
+            if(search.trim === "") return alert("Please enter a search value")
+            if(user.role === 3) 
+            {navigate(`/admin/search/${search}`)
+          } else {
             navigate(`/search/${search}`)
+          }
           }} className="relative gg:w-full w-[60%]">
             <SearchIcon />
             {/* search bar */}
@@ -61,12 +66,19 @@ const Navbar = () => {
               <ShopIcon />
             </div>
           </Link> : 
-          (isAuth && (user.role === 2 || user.role === 3) ) ?
-          <Link to="/notifications">
+          (isAuth && user.role === 2  ) ?
+          <Link to="/commandes">
           <div className="hover:cursor-pointer">
             <NotificationsIcon />
           </div>
         </Link> : 
+        (isAuth && user.role === 3) ? 
+        <Link to="/admin/notifications">
+          <div className="hover:cursor-pointer">
+            <NotificationsIcon />
+          </div>
+        </Link>
+        :
         <Link to="/card">
         <div className="hover:cursor-pointer">
           <ShopIcon />
