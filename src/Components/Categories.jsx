@@ -7,8 +7,9 @@ const Categories = () => {
   const categories = [
     { id :1, name: "Femme", icon: "FemmeIcon" },
     { id :2,name: "Homme", icon: "HommeIcon" },
-    { id :3,name: "Enfant", icon: "EnfantIcon" },
-    { id :4,name: "Beauté & Santé", icon: "Eléctroniques" },
+    { id :3,name: "Electromenager", icon: "ElectromenagerIcon" },
+    { id :4,name: "Eléctroniques", icon: "Eléctroniques" },
+    { id :5,name: "Autres", icon: "autres" },
   ];
   return (
     <div className="mt-2 mb-1">
