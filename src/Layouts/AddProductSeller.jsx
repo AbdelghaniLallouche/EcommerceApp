@@ -265,6 +265,9 @@ const AddProductSeller = () => {
               />
             </div>
           ))}
+          <button
+          className="bg-black text-white pt-1 pb-[6px] w-full rounded-xl"
+          >ajouter le produit</button>
         </form>
       </div>
     </div>
