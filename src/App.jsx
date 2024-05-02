@@ -13,7 +13,7 @@ import Product from "./Layouts/Product";
 import Category from "./Layouts/Category";
 import Search from "./Layouts/Search";
 import Notifications from "./Layouts/Notifications";
-import Login from "./Layouts/Login";
+import Login from "./Layouts/Loginn";
 import InscriptionC from "./Layouts/inscriptionclient";
 import InscriptionV from "./Layouts/inscriptionVendeur";
 import ContactForm from "./Layouts/reclamation";
@@ -25,6 +25,7 @@ import Comments from "./Layouts/Comments";
 import Reclamations from "./Layouts/Reclamations";
 import Acceptations from "./Layouts/Acceptations";
 import Gestion from "./Layouts/Gestion";
+import AddProductSeller from "./Layouts/AddProductSeller";
 // import AdminCategories from "./Layouts/AdminCategories";
 // import AdminSearch from "./Layouts/AdminSearch";
 // import AdminUsers from "./Layouts/AdminUsers";
@@ -52,6 +53,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/commandes" element= {<Commandes/>} />
           <Route path="/gestion" element= {<Gestion/>} />
+          <Route path="/addProduct" element = {<AddProductSeller />} />
           <Route path="/acceptations" element= {<Acceptations/>} />
           <Route path="/commentaires" element= {<Comments/>} />
           <Route path="/reclamations" element= {<Reclamations/>} />

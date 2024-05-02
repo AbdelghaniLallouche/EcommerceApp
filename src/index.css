@@ -44,3 +44,6 @@ code {
 .inputt{
   @apply ps-2 pt-1 pb-2 focus:outline-none bg-[#F4F5F7] w-full  rounded-md text-black;
 }
+.labell{
+  @apply flex hover:bg-gray-600 p-1 hover:bg-opacity-50 justify-start items-center gap-1;
+}
