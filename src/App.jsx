@@ -26,6 +26,8 @@ import Reclamations from "./Layouts/Reclamations";
 import Acceptations from "./Layouts/Acceptations";
 import Gestion from "./Layouts/Gestion";
 import AddProductSeller from "./Layouts/AddProductSeller";
+import AdminPanel from "./Layouts/AdminPanel";
+import AdminCategories from "./Layouts/AdminCategories";
 // import AdminCategories from "./Layouts/AdminCategories";
 // import AdminSearch from "./Layouts/AdminSearch";
 // import AdminUsers from "./Layouts/AdminUsers";
@@ -43,9 +45,10 @@ function App() {
           <Route path="/admin" element={<AdminSection />} >
             <Route path="/admin" element={<Homepage />} />
             <Route path="/admin/products" element={<AdminProducts />} />
+            <Route path="/admin/categories" element = {<AdminCategories />} />
             <Route path="/admin/profile" element={<Profile />} />
             <Route path="/admin/notifications" element={<AdminNotifications />} />
-            {/* <Route path="/admin/categories" element={<AdminCategories />} /> */}
+            <Route path="/admin/homepics" element = {<AdminPanel />} />
             {/* <Route path="/admin/search/:product" element={<AdminSearch />} />
             <Route path="/admin/users" element={<AdminUsers />} /> */}
           </Route>

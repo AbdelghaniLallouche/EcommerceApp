@@ -13,7 +13,7 @@ const Footer = () => {
 
         <a href="#">
           <div className="flex flex-row justify-start items-center gap-1 ">
-            <EmailIcon />
+            <EmailIcon color="white"/>
         <p className="text-sm text-white">ecommerce@gmail.com</p>
         </div>
         </a>
