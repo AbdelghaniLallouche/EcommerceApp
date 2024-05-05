@@ -4,37 +4,60 @@ import { Link } from "react-router-dom";
 
 const Firstpage = () => {
   const [ads, setAds] = useState([
+    //bring best promo prod from database
     {
       id: 1,
-      pic: "../src/Pics/a.jpg",
+      name: "macbook",
+      pic: "../src/Pics/macbook.jpg",
+      ispromo: true,
+      promotion: 30,
+      rating: 4.5,
+      price: 100,
     },
     {
       id: 2,
-      pic: "../src/Pics/wol.jpg",
+      name: "makeup",
+      pic: "../src/Pics/makeup.jpg",
+      ispromo: true,
+      promotion: 40,
+      rating: 3.5,
+      price: 200,
     },
     {
       id: 3,
-      pic: "../src/Pics/a.jpg",
+      name: "macbook",
+      pic: "../src/Pics/macbook.jpg",
+      ispromo: true,
+      promotion: 30,
+      rating: 4.5,
+      price: 100,
     },
     {
       id: 4,
-      pic: "../src/Pics/wol.jpg",
-    },
-    {
-      id: 5,
-      pic: "../src/Pics/a.jpg",
+      name: "macbook",
+      pic: "../src/Pics/macbook.jpg",
+      ispromo: true,
+      promotion: 30,
+      rating: 4.5,
+      price: 100,
     },
   ]);
   const [currentAd, setCurrentAd] = useState(0);
+  const [user , setUser] = useState({
+    id : 1,
+    nom : "aaa",
+    prenom : "aaa",
+    role: 3 //1 for costumer , 2 for vendeur , 3 for admin  
+  })
 
   return (
     <div className="w-calc(100% - 40px) mx-4 my-3">
-      <Link
+      {user.role === 3 && <Link
         to="/admin/homepics">
         <div className="w-full text-center bg-white shadow-xl rounded-xl text-black pt-1 pb-[6px] my-2">
           Change Pics
         </div>
-      </Link>
+      </Link>}
       <div className="flex gap-4 flex-col md:flex-row justify-start items-center w-full">
         <div className="relative md:w-[65%] w-full md:h-[416px] h-[226px] smal:h-[276px] lil:h-[316px]">
           <button
@@ -71,14 +94,14 @@ const Firstpage = () => {
           <div className="w-full h-[156px] smal:h-[200px]">
             <img
               className="bg-cover h-full w-full object-fill"
-              src="./src/Pics/a.jpg"
+              src={ads[0].pic}
               alt=""
             />
           </div>
           <div className="w-full h-[156px] smal:h-[200px]">
             <img
               className="bg-cover w-full h-full object-fill"
-              src="./src/Pics/a.jpg"
+              src={ads[0].pic}
               alt=""
             />
           </div>
